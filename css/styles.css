@@ -1,29 +1,44 @@
-{ margin:10px 10px; padding:0px; font-family:arial;}
-img{ border:none;}
-label input {
-    cursor: pointer;
-    font-size: 24px;
-    height: 25px;
-    left: -252px;
-    line-height: 0;
-    margin: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;    
-    z-index: 999;
+{
+    margin:10px 10px;
+    padding:0px;
+    font-family:arial;
+}
+img {
+    border:none;
 }
 
-.rewardpop{ width:98%; height:445px; padding:20px 0; margin:0; font-family:arial; overflow:hidden}
-.rewardpop_lt{width:30%; height:auto; float:left; margin:0; padding:0;}
-.rewardpop_lt ul{list-style:none; margin:0; padding:0; overflow:hidden}
-.rewardpop_lt ul li{ text-align:center; padding:0 0 10px 0;}
-.rewardpop_lt ul li img{ font-size:x-small;}
-.rewardpop_rt{width:60%; height:auto; float:left; margin:0; padding:0;}
-label.filebutton {
-    width:120px;
-    height:40px;
-    overflow:hidden;
-    position:relative;
-    
+.rewardpop {
+    width:98%;
+    height:445px;
+    padding:20px 0;
+    margin:0;
+    font-family:arial;
+    overflow:hidden
+}
+.rewardpop_lt {
+    width:30%;
+    height:auto;
+    float:left;
+    margin:0;
+    padding:0;
+}
+.rewardpop_lt ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    overflow:hidden
+}
+.rewardpop_lt ul li {
+    text-align:center;
+    padding:0 0 10px 0;
+}
+.rewardpop_lt ul li img {
+    font-size:x-small;
+}
+.rewardpop_rt {
+    width:60%;
+    height:auto;
+    float:left;
+    margin:0;
+    padding:0;
 }
