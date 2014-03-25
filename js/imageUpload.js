@@ -1,5 +1,15 @@
 $(document).ready(function($) {
 	$.extend( true, jQuery.fn, { 
+			// Fix because $.browser.msie removed in latest versions of jQuery
+			$.browser = {};
+			(function () {
+				$.browser.msie = false;
+				$.browser.version = 0;
+				if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+					$.browser.msie = true;
+					$.browser.version = RegExp.$1;
+				}
+			})();
 		/** Create image preview box **/
 		imagePreview: function( options ){			
 			var defaults = {};
@@ -18,9 +28,10 @@ $(document).ready(function($) {
 							width: 115,
 							height: 115
 						});
-					}else{
+					}else{alert("1");
 						var files = evt.target.files; // FileList object
 						// Loop through the FileList and render image files as thumbnails.
+						alert("2");
 						for (var i = 0, f; f = files[i]; i++) {
 							// Only process image files.
 							if (!f.type.match('image.*')) {
@@ -28,9 +39,11 @@ $(document).ready(function($) {
 							}
 							var reader = new FileReader();
 							// Closure to capture the file information.
+							alert("3");
 							reader.onload = (function(theFile) {
 								return function(e) {
 								// Render thumbnail.
+								alert("4");
 								$('#imageURL').attr('src',e.target.result);			
 								};
 							})(f);
